@@ -1,0 +1,24 @@
+html,
+body{
+   margin: 0;
+   font-family: sans-serif;
+}
+#wrap{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    border: 5px solid black;
+    background-color: rgb(103, 180, 224);
+    color:rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 20px 80px;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor:pointer;
+}
