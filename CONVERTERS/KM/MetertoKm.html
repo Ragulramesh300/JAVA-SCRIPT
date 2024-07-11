@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetertoKM</title>
+</head>
+<body>
+    <div id="wrap">
+        <h2>Meter to KM</h2>
+    <div class="input">
+        <input type="text" id="input" placeholder="Meter to KM">
+    </div>
+    <div>
+        <button type="submit" onclick="Convert()">Convert To KM</button>
+    </div>
+    <div id="result"></div>
+    </div>
+</body>
+<script>
+    function Convert() {
+        const Meter = Number(document.getElementById("input").value)
+        const KM = Meter/1000
+        const result = document.getElementById("result")
+        result.innerHTML=KM.toFixed(3)+"KM"
+    }
+</script>
+
+<style>
+    body{
+        margin:none;
+        background-color:#b2ad7f ;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #wrap div,#wrap h2{
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+        font-size: 60px;
+        letter-spacing: 1px;
+        padding-top: 100px;
+        
+    }
+    input{
+        background-color:#fcfcfc;
+        padding-left: 10px;
+        border-radius: 5px;
+        border: 2px solid black;
+        height: 30px;
+        width: 15em;
+
+    }    
+    input :active{
+        border: none;
+    }
+    #wrap{
+      height: 400px;  
+      width: 500px;
+      margin: auto;
+      border-radius: 20px;
+      background-color: #feb236;
+      padding-bottom: 50px;
+    }  
+    button{
+      margin: 40px;
+      border-radius: 20px;
+      border-color: 2px solid black;
+      font-weight: 600;
+      background-color: #82b74b; 
+    }
+    button:hover{
+        cursor:pointer;  
+    }
+    #result{
+        color: black;
+        font-size: 2em;
+        margin-top:20px;
+    }
+</style>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenth Converter</title>
+</head>
+<body>
+    <div id="wrap">
+        <h2>Cm to Inches</h2>
+    <div class="input">
+        <input type="text" id="input" placeholder="Cm to Inches">
+    </div>
+    <div><button type="submit" onclick="Convert()">Convert to Inches</button>
+    </div>
+    <div id="result"></div>
+    </div>
+    <script>
+        function Convert(){
+            const cmval = Number(document.getElementById("input").value)
+            const inval = cmval/2.54
+            const result = document.getElementById("result")
+            result.innerHTML = inval.toFixed(3)+"Inches"}
+    </script>
+
+</body>
+<style>
+    body{
+        margin:0;
+        background-color: rgb(180, 171, 36);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #wrap div,#wrap h2{
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+       color: rgb(0, 0, 0); 
+       letter-spacing: 1px;
+       font-size: 30px;
+    }
+    input{
+       border-radius: 5px; 
+       border: 2px solid black;
+       margin-top: 20px;
+       height: 30px;
+       width: 20em;
+       padding-left: 20px;
+    }
+    input:active{
+       border:none;
+    }
+    #wrap{
+      height: 400px;  
+      width: 500px;
+      margin: auto;
+      border-radius: 20px;
+      background-color: bisque;
+      padding-bottom: 500;
+      /* border-color: 2em solid black; */
+      /* padding: 10px */
+      
+    }
+    button{
+      border-radius: 50px; 
+      border: 2px solid rgb(0, 0, 0);
+      margin-top: 50px;
+      height: 30px;
+      width: 20em;
+      background-color: rgb(153, 173, 97);
+      font-weight: 600;
+      border: none;
+      color: rgb(0, 0, 0);
+      /* padding-left: 20px; */
+
+    }
+    button:hover{
+    cursor:pointer;
+    }
+    #result{
+    color:white;
+    margin-top:20px;
+    font-size:32px;
+    
+    }
+    
+</style>
+</html>
+

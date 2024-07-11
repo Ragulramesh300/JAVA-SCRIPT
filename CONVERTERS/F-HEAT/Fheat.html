@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius to Fahrenheit</title>
+</head>
+<body>
+  
+    <div id="wrap">
+        <h2>Celsius to Fahrenheit</h2>
+    <div class="input">
+        <input type="text" id="input" placeholder="Celsius to Fahrenheit">
+    </div>
+    <div>
+        <button type="submit" onclick="Convert()">Convert to Fahrenheit </button>
+    </div> 
+    <div id="result"></div>  
+    </div>
+    <style>
+        body{
+        margin:0;
+        background-color: #034f84;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #wrap div,#wrap h2{
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+       color: rgb(0, 0, 0); 
+       letter-spacing: 1px;
+       font-size: 30px;
+       padding-top: 30px;
+    }
+    input{
+       border-radius: 5px; 
+       border: 2px solid black;
+       margin-top: 20px;
+       height: 30px;
+       width: 15em;
+       padding-left: 20px;
+       background-color: #b1cbbb;
+    }
+    input:active{
+       border:none;
+    }
+    #wrap{
+      height: 400px;  
+      width: 500px;
+      margin: auto;
+      border-radius: 20px;
+      background-color: #c94c4c;
+      padding-bottom: 500;  
+    }
+    button{
+      border-radius: 50px; 
+      margin-top: 50px;
+      height: 30px;
+      width: 10em;
+      background-color: rgb(153, 173, 97);
+      font-weight: 600;
+      border: none;
+    }
+    button:hover{
+    cursor:pointer;
+    }
+    #result{
+    color:white;
+    margin-top:20px;
+    font-size:32px;
+    
+    }
+    
+    </style>
+<script>
+    function Convert(){
+        const celsius = Number(document.getElementById("input").value)
+        const fahrenheit = (celsius * 9 / 5) + 32
+        const result= document.getElementById("result")
+        result.innerHTML = fahrenheit.toFixed(3)+"Fahrenheit"
+    } 
+</script>
+</body>
+
+</html>
