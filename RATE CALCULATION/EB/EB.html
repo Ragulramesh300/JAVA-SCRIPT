@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="EB.css">
+    <title>EB Bill Calculator</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>EB Bill</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Units">
+        </div>
+        <div>
+            <button type="submit" onclick="ebbill()">Calculate</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function ebbill(){
+            const unit = Number(document.getElementById('input').value)
+            let rate=0
+            if(unit<50)
+            rate=0.75
+            else if(unit>=100 && unit<=199)
+            rate=1.00
+            else if(unit>=200 && unit<=249)
+            rate=1.30
+            else
+            rate=1.50
+            const billAmount = unit * rate;
+            
+        let result = document.querySelector("#result")
+        result.innerHTML=`Your bill is ${billAmount.toFixed(2)}`
+        }
+    </script>
+</body>
+</html>
