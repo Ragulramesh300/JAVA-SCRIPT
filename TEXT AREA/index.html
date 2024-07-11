@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quotes</title>
+</head>
+<body>
+<div id="wrap">
+    <h2>Quotes</h2>
+    <div>
+        <textarea name="Life Line" id="line">"I believe in giving more than 100% on the field, and I don't worry about the result if there's a great commitment on the field. That's a victory for me." "Till the full stop does not come; the sentence does not complete." "It's important to learn and not make the same mistakes, what's done is done."</textarea>
+    </div>
+    <div><button type="submit" id="Bt" onclick="cal()">Calculate</button>
+    </div>
+    <div id="result"></div>
+</div>
+<script>
+    function cal(){
+        const textarea =document.querySelector("textarea").value.split(" ").filter(Boolean).length;
+        const result =document.getElementById("result")
+        result.innerHTML= textarea+"Words"
+    }
+</script>
+</body>
+</html>
