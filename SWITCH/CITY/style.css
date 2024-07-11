@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+#wrapper {
+    height: 500px;
+    width: 400px;
+    margin: 100px auto;
+    background-color: #2a2a72;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+#wrapper h2, #wrapper div {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    color: #ffecda;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+select {
+    border-radius: 5px;
+    border: 2px solid #ffecda;
+    margin-top: 30px;
+    height: 2.5em;
+    width: 250px;
+    padding-left: 10px;
+    background: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:hover {
+    border-color: #ffecda;
+    box-shadow: 0 0 10px rgba(255, 236, 218, 0.5);
+}
+
+button {
+    margin-top: 20px;
+    background-color: #ffecda;
+    border-radius: 4px;
+    height: 44px;
+    font-weight: 600;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    border: none;
+    color: #2a2a72;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #ffb6c1;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#result {
+    color: #ffecda;
+    margin-top: 20px;
+    font-size: 32px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
